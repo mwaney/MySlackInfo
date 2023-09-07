@@ -7,9 +7,8 @@ const fetchData = () => {
   const data = {
     slackUserName: "edu",
     slackDisplayImage:
-      "https://ca.slack-edge.com/T05FFAA91JP-U05R7BLPFQD-4f73341695cb-512",
+      "https://ca.slack-edge.com/T05FFAA91JP-U05R7BLPFQD-f5734170931c-512",
     currentDayOfTheWeek: getWeekDay(),
-    currentUTCTime: getCurrentTime(),
     myTrack: "Frontend",
     githubURL: "https://github.com/mwaney",
   };

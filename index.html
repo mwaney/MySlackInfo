@@ -7,13 +7,17 @@
     <link rel="stylesheet" href="app.css" />
   </head>
   <body>
-    <div class="slack card">
-      <h1 data-testid="slackUserName">Loading...</h1>
-      <img src="" alt="" data-testid="slackDisplayImage" />
-      <p data-testid="currentDayOfTheWeek">Loading...</p>
-      <p data-testid="currentUTCTime">Loading...</p>
-      <p data-testid="myTrack">Loading...</p>
-      <a href="" data-testid="githubURL">Loading...</a>
+    <div class="container">
+      <div class="card">
+        <div class="image">
+          <img src="" alt="" data-testid="slackDisplayImage" class="pic" />
+        </div>
+        <h1 data-testid="slackUserName" class="name">Loading...</h1>
+        <p data-testid="currentDayOfTheWeek" class="day">Loading...</p>
+        <p data-testid="currentUTCTime" class="time">Loading...</p>
+        <p data-testid="myTrack" class="track">Loading...</p>
+        <a href="" data-testid="githubURL" class="link">Loading...</a>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>
