@@ -19,3 +19,6 @@ The My Slack Info Web App is a simple and stylish site designed to display My Sl
 - **CSS:** I have applied CSS styles to enhance the visual appeal and user experience.
 
 - **JavaScript:** JavaScript is utilized to fetch and update the Slack profile data and manage real-time UTC time updates.
+
+## See the Site
+You can visit [My Slack Info](https://mwaney.github.io/MySlackInfo/) to see how the site looks 😃
