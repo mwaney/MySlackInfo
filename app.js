@@ -10,7 +10,7 @@ const fetchData = () => {
       "https://ca.slack-edge.com/T05FFAA91JP-U05R7BLPFQD-f5734170931c-512",
     currentDayOfTheWeek: getWeekDay(),
     myTrack: "Frontend",
-    githubURL: "https://github.com/mwaney",
+    githubURL: "https://github.com/mwaney/MySlackInfo",
   };
 
   document.querySelector("[data-testid='slackUserName']").textContent =
