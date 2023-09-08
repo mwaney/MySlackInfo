@@ -5,33 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const fetchData = () => {
   const data = {
-    slackUserName: "edu",
-    slackDisplayImage:
-      "https://ca.slack-edge.com/T05FFAA91JP-U05R7BLPFQD-f5734170931c-512",
     currentDayOfTheWeek: getWeekDay(),
-    myTrack: "Frontend",
-    githubURL: "https://github.com/mwaney/MySlackInfo",
   };
 
-  document.querySelector("[data-testid='slackUserName']").textContent =
-    data.slackUserName;
-  document
-    .querySelector("[data-testid='slackDisplayImage']")
-    .setAttribute("src", data.slackDisplayImage);
-  document
-    .querySelector("[data-testid='slackDisplayImage']")
-    .setAttribute("alt", data.slackUserName);
   document.querySelector(
     "[data-testid='currentDayOfTheWeek']"
   ).textContent = `Day: ${data.currentDayOfTheWeek}`;
-  document.querySelector(
-    "[data-testid='myTrack']"
-  ).textContent = `Track: ${data.myTrack}`;
-  document.querySelector("[data-testid='githubURL']").textContent =
-    data.githubURL;
-  document
-    .querySelector("[data-testid='githubURL']")
-    .setAttribute("href", data.githubURL);
 };
 
 function getWeekDay() {
@@ -52,14 +31,12 @@ function getWeekDay() {
 function getCurrentTime() {
   setInterval(() => {
     const date = new Date();
-    const hour = date.getUTCHours().toString().padStart(2, "0");
-    const minute = date.getUTCMinutes().toString().padStart(2, "0");
-    const second = date.getUTCSeconds().toString().padStart(2, "0");
-    const millisecond = date.getUTCMilliseconds().toString().padStart(3, "0");
+    const options = { timezone: "Africa/Nairobi" };
+    const time = date.toLocaleTimeString("en-Us", options);
+    const milliseconds = date.getTime();
 
-    const time = `${hour}:${minute}:${second}:${millisecond}`;
-    const milliTime = date.getTime();
-    document.querySelector("[data-testid='currentUTCTime']").textContent =
-      time + " | Milliseconds " + milliTime;
-  }, 100);
+    document.querySelector(
+      "[data-testid='currentUTCTime']"
+    ).textContent = `Local Time: ${time} | UTC Milliseconds: ${milliseconds}`;
+  }, 1000);
 }
