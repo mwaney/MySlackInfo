@@ -13,6 +13,7 @@ const fetchData = () => {
   ).textContent = `Day: ${data.currentDayOfTheWeek}`;
 };
 
+// get the day of the week
 function getWeekDay() {
   const weekDays = [
     "Sunday",
