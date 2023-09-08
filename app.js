@@ -21,9 +21,12 @@ const fetchData = () => {
   document
     .querySelector("[data-testid='slackDisplayImage']")
     .setAttribute("alt", data.slackUserName);
-  document.querySelector("[data-testid='currentDayOfTheWeek']").textContent =
-    data.currentDayOfTheWeek;
-  document.querySelector("[data-testid='myTrack']").textContent = data.myTrack;
+  document.querySelector(
+    "[data-testid='currentDayOfTheWeek']"
+  ).textContent = `Day: ${data.currentDayOfTheWeek}`;
+  document.querySelector(
+    "[data-testid='myTrack']"
+  ).textContent = `Track: ${data.myTrack}`;
   document.querySelector("[data-testid='githubURL']").textContent =
     data.githubURL;
   document
@@ -55,6 +58,8 @@ function getCurrentTime() {
     const millisecond = date.getUTCMilliseconds().toString().padStart(3, "0");
 
     const time = `${hour}:${minute}:${second}:${millisecond}`;
-    document.querySelector("[data-testid='currentUTCTime']").textContent = time;
+    const milliTime = date.getTime();
+    document.querySelector("[data-testid='currentUTCTime']").textContent =
+      time + " | Milliseconds " + milliTime;
   }, 100);
 }
