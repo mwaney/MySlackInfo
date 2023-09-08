@@ -46,10 +46,21 @@ function getWeekDay() {
   return weekDays[dayNumber];
 }
 
+// function getCurrentTime() {
+//   setInterval(() => {
+//     const currentUTCTime = new Date().getTime();
+//     document.querySelector('[data-testid="currentUTCTime"]').textContent =
+//       currentUTCTime;
+//   }, 1000);
+// }
 function getCurrentTime() {
   setInterval(() => {
-    const currentUTCTime = new Date().getTime();
-    document.querySelector('[data-testid="currentUTCTime"]').textContent =
-      currentUTCTime;
+    const date = new Date();
+    const hour = date.getUTCHours().toString().padStart(2, "0");
+    const minute = date.getUTCMinutes().toString().padStart(2, "0");
+    const second = date.getUTCSeconds().toString().padStart(2, "0");
+
+    const time = `${hour}:${minute}:${second}`;
+    document.querySelector("[data-testid='currentUTCTime']").textContent = time;
   }, 1000);
 }
