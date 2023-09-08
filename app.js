@@ -52,8 +52,9 @@ function getCurrentTime() {
     const hour = date.getUTCHours().toString().padStart(2, "0");
     const minute = date.getUTCMinutes().toString().padStart(2, "0");
     const second = date.getUTCSeconds().toString().padStart(2, "0");
+    const millisecond = date.getUTCMilliseconds().toString().padStart(3, "0");
 
-    const time = `${hour}:${minute}:${second}`;
+    const time = `${hour}:${minute}:${second}:${millisecond}`;
     document.querySelector("[data-testid='currentUTCTime']").textContent = time;
-  }, 1000);
+  }, 100);
 }
