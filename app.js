@@ -46,13 +46,6 @@ function getWeekDay() {
   return weekDays[dayNumber];
 }
 
-// function getCurrentTime() {
-//   setInterval(() => {
-//     const currentUTCTime = new Date().getTime();
-//     document.querySelector('[data-testid="currentUTCTime"]').textContent =
-//       currentUTCTime;
-//   }, 1000);
-// }
 function getCurrentTime() {
   setInterval(() => {
     const date = new Date();
